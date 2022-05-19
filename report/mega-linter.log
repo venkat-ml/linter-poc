@@ -1,0 +1,76 @@
+----------------------------------------------------------------------------------------------------
+-------------------------------------------- MegaLinter --------------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2022-05-15T19:58:30Z
+ - Image Revision: 7908c4d34
+ - Image Version: v5
+----------------------------------------------------------------------------------------------------
+The MegaLinter documentation can be found at:
+ - https://megalinter.github.io
+----------------------------------------------------------------------------------------------------
+GITHUB_REPOSITORY: venkat-ml/linter-poc
+GITHUB_REF: refs/heads/feature
+GITHUB_RUN_ID: 2350097777
+
+
+[Activation] EDITORCONFIG_EDITORCONFIG_CHECKER has been set inactive, as none of these files has been found: ['.editorconfig']
+[Activation] JAVASCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] JSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] SQL_SQLFLUFF has been set inactive, as none of these files has been found: ['.sqlfluff']
+[Activation] SWIFT_SWIFTLINT has been set inactive, as none of these files has been found: ['.swiftlint.yml']
+[Activation] TSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] TYPESCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+RST_RSTFMT has been temporary disabled in MegaLinter, please use a previous MegaLinter version or wait for the next one !
+Skipped linters: ANSIBLE_ANSIBLE_LINT, COPYPASTE_JSCPD, EDITORCONFIG_EDITORCONFIG_CHECKER, JAVASCRIPT_ES, JAVASCRIPT_PRETTIER, JSX_ESLINT, KUBERNETES_KUBECONFORM, KUBERNETES_KUBEVAL, MARKDOWN_REMARK_LINT, RST_RSTFMT, SALESFORCE_SFDX_SCANNER_APEX, SALESFORCE_SFDX_SCANNER_AURA, SALESFORCE_SFDX_SCANNER_LWC, SPELL_CSPELL, SPELL_MISSPELL, SQL_SQLFLUFF, SWIFT_SWIFTLINT, TSX_ESLINT, TYPESCRIPT_ES, TYPESCRIPT_PRETTIER
+To receive reports as email, please set variable EMAIL_REPORTER_EMAIL
+Listing updated files in [/github/workspace] using git diff.
+Modified files:
+nodeDetails.groovy
+- File extensions: , .R, .RMD, .Rmd, .bash, .c, .c++, .cc, .cdxml, .clj, .cljc, .cljs, .coffee, .cpp, .cs, .css, .cu, .cuh, .cxx, .dart, .dash, .edn, .env, .feature, .go, .gradle, .graphql, .groovy, .gvy, .h, .h++, .hcl, .hh, .hpp, .htm, .html, .hxx, .java, .js, .json, .json5, .jsonc, .ksh, .kt, .kts, .lua, .md, .nf, .p6, .php, .pl, .pl6, .pm, .pm6, .pp, .proto, .ps1, .ps1xml, .psd1, .psm1, .psrc, .pssc, .py, .r, .raku, .rakumod, .rakutest, .rb, .rs, .rst, .saas, .scala, .scss, .sh, .smk, .sql, .t, .tex, .tf, .ts, .vb, .xml, .yaml, .yml
+- File names (regex): Dockerfile, Jenkinsfile, Snakefile
+- Excluding .gitignored files [0]: 
+Kept [1] files on [1] found files
+
++----MATCHING LINTERS-----------+--------------------------------------+----------------+------------+
+| Descriptor  | Linter          | Criteria                             | Matching files | Format/Fix |
++-------------+-----------------+--------------------------------------+----------------+------------+
+| CREDENTIALS | secretlint      |                                      | project        | no         |
+| GIT         | git_diff        |                                      | project        | no         |
+| GROOVY      | npm-groovy-lint | .groovy|.gvy|.gradle|.nf|Jenkinsfile | 1              | yes        |
++-------------+-----------------+--------------------------------------+----------------+------------+
+
+
+[1m### Processed [GIT] files[0m
+- Using [git_diff v2.30.3] https://megalinter.github.io/v5/descriptors/git_git_diff
+- MegaLinter key: [GIT_GIT_DIFF]
+- Rules config: identified by [git_diff]
+[32m✅ Linted [GIT] files with [git_diff] successfully - (0.0s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-GIT_GIT_DIFF.log
+
+[1m### Processed [CREDENTIALS] files[0m
+- Using [secretlint v4.1.0] https://megalinter.github.io/v5/descriptors/credentials_secretlint
+- MegaLinter key: [CREDENTIALS_SECRETLINT]
+- Rules config: [.secretlintrc.json]
+[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (0.8s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-CREDENTIALS_SECRETLINT.log
+
+[1m### Processed [GROOVY] files[0m
+- Using [npm-groovy-lint v9.5.0] https://megalinter.github.io/v5/descriptors/groovy_npm_groovy_lint
+- MegaLinter key: [GROOVY_NPM_GROOVY_LINT]
+- Rules config: [.groovylintrc.json]
+[36m[npm-groovy-lint] nodeDetails.groovy - SUCCESS - 0 error(s) - FIXED[0m
+[32m✅ Linted [GROOVY] files with [npm-groovy-lint] successfully - (5.06s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-GROOVY_NPM_GROOVY_LINT.log
+
++----SUMMARY-----+-----------------+---------+-------+-------+--------+--------------+
+| Descriptor     | Linter          | Mode    | Files | Fixed | Errors | Elapsed time |
++----------------+-----------------+---------+-------+-------+--------+--------------+
+| ✅ CREDENTIALS | secretlint      | project |   n/a |       |      0 |         0.8s |
+| ✅ GIT         | git_diff        | project |   n/a |       |      0 |         0.0s |
+| ✅ GROOVY      | npm-groovy-lint | file    |     1 |     1 |      0 |        5.06s |
++----------------+-----------------+---------+-------+-------+--------+--------------+
+
+[GitHub Comment Reporter] No pull request has been found, so no comment has been posted
+[Updated Sources Reporter] copied 1 fixed source files in folder /github/workspace/report/updated_sources.
+Download it from artifacts then copy-paste it in your local repo to apply linters updates
+[32m✅ Successfully linted all files without errors[0m
